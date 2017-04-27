@@ -4,21 +4,22 @@ package homework;
  * Created by prots on 27.04.2017.
  */
 public class Dog {
-    private String name, breed;
+    private String name;
+    Breed breed;
     private int age;
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setBreed(String breed) {
+    public void setBreed(Breed breed) {
         this.breed = breed;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
-    Dog(String name, String breed, int age){
+    Dog(String name, Breed breed, int age){
         setName(name);
         setBreed(breed);
         setAge(age);
@@ -29,7 +30,7 @@ public class Dog {
     }
 
     public String getBreed() {
-        return breed;
+        return breed.toString();
     }
 
     public int getAge() {
@@ -63,9 +64,9 @@ public class Dog {
             return "Wrong!";
     }
     public static void main(String[] args) {
-        Dog dog1 = new Dog("Linda","Chow-chow", 5);
-        Dog dog2 = new Dog("Tyson", "Labrador Retriever", 1);
-        Dog dog3 = new Dog("Tufik", "Royal Pekingese", 3);
+        Dog dog1 = new Dog("Linda",Breed.CHOW_CHOW, 5);
+        Dog dog2 = new Dog("Tyson", Breed.LABRADOR_RETRIVER, 1);
+        Dog dog3 = new Dog("Tufik", Breed.ROYAL_PEKINGESE, 3);
 
         System.out.println(checkTheSameName(dog1,dog2,dog3));
         System.out.println(checkTheOldesDog(dog1,dog2,dog3));
