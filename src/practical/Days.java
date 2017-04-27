@@ -18,24 +18,24 @@ public class Days {
         return number;
     }
 
-    public void setDay() {
+    public String setDay() {
         switch (getNumber()) {
             case 1:
-                System.out.println("Monday, Понеділок, Понедельник"); break;
+                return "Monday, Понеділок, Понедельник";
             case 2:
-                System.out.println("Tuesday, Вівторок, Вторник"); break;
+                return "Tuesday, Вівторок, Вторник";
             case 3:
-                System.out.println("Wednesday, Середа, Среда"); break;
+                return "Wednesday, Середа, Среда";
             case 4:
-                System.out.println("Thursday, Четвер, Четверг"); break;
+                return "Thursday, Четвер, Четверг";
             case 5:
-                System.out.println("Friday, П'ятниця, Пятница"); break;
+                return "Friday, П'ятниця, Пятница";
             case 6:
-                System.out.println("Saturday, Субота, Субота"); break;
+                return "Saturday, Субота, Субота";
             case 7:
-                System.out.println("Sunday, Неділя, воскресенье"); break;
+                return "Sunday, Неділя, воскресенье";
             default:
-                System.out.println("You wrong! Please enter number: 1 - 7."); break;
+                return "You wrong! Please enter number: 1 - 7.";
         }
     }
 
